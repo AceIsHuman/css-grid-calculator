@@ -3,12 +3,14 @@ import styled from 'styled-components';
 
 import Display from './Display';
 import Operators from './Operators';
+import Numbers from './Numbers';
 
 const Calculator = () => {
   return (
     <CalculatorContainer>
       <Display />
       <Operators />
+      <Numbers />
     </CalculatorContainer>
   );
 };
