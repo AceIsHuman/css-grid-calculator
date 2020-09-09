@@ -7,6 +7,10 @@ const Button = props => {
     grid-row: ${gridRow};
     grid-column: ${gridColumn};
     background-color: ${color};
+    border-radius: 1rem;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-family: 'Share Tech Mono';
   `;
 
   return <StyledButton onClick={method}>{value}</StyledButton>;
