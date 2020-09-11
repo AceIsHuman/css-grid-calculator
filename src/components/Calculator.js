@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Display from './Display';
@@ -6,9 +6,11 @@ import Operators from './Operators';
 import Numbers from './Numbers';
 
 const Calculator = () => {
+  const [total, setTotal] = useState('0');
+
   return (
     <CalculatorContainer>
-      <Display />
+      <Display displayValue={total} />
       <Operators />
       <Numbers />
     </CalculatorContainer>
