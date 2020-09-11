@@ -10,6 +10,7 @@ const Button = props => {
       gridRow={gridRow}
       gridColumn={gridColumn}
       color={color}
+      value={value}
     >
       {value}
     </StyledButton>
