@@ -8,11 +8,16 @@ import Numbers from './Numbers';
 const Calculator = () => {
   const [total, setTotal] = useState('0');
 
+  const handleNumber = e => {
+    e.preventDefault();
+    total === '0' ? setTotal(e.target.value) : setTotal(total + e.target.value);
+  };
+
   return (
     <CalculatorContainer>
       <Display displayValue={total} />
       <Operators />
-      <Numbers />
+      <Numbers handleNumber={handleNumber} />
     </CalculatorContainer>
   );
 };
