@@ -5,18 +5,31 @@ import Display from './Display';
 import Operators from './Operators';
 import Numbers from './Numbers';
 
+import operations from '../helpers/operations';
+
 const Calculator = () => {
   const [total, setTotal] = useState('0');
+  const [previousTotal, setPreviousTotal] = useState(0);
 
   const handleNumber = e => {
     e.preventDefault();
     total === '0' ? setTotal(e.target.value) : setTotal(total + e.target.value);
   };
 
+  const handleOperator = e => {
+    e.preventDefault();
+    operations[e.target.value]({
+      total,
+      setTotal,
+      previousTotal,
+      setPreviousTotal,
+    });
+  };
+
   return (
     <CalculatorContainer>
       <Display displayValue={total} />
-      <Operators />
+      <Operators handleOperator={handleOperator} />
       <Numbers handleNumber={handleNumber} />
     </CalculatorContainer>
   );
