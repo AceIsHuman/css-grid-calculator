@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = props => {
-  const { value, gridRow, gridColumn, color, method } = props;
+  const { value, gridRow, gridColumn, color, method, operator } = props;
 
   return (
     <StyledButton
@@ -10,7 +10,7 @@ const Button = props => {
       gridRow={gridRow}
       gridColumn={gridColumn}
       color={color}
-      value={value}
+      value={operator || value}
     >
       {value}
     </StyledButton>
