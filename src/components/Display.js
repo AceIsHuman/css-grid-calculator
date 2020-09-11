@@ -16,6 +16,7 @@ const DisplayContainer = styled.div`
   font-size: 4.2rem;
   padding: 1rem;
   border-radius: 1rem;
+  overflow: hidden;
 `;
 
 export default Display;
