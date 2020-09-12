@@ -10,10 +10,13 @@ import operations from '../helpers/operations';
 const Calculator = () => {
   const [total, setTotal] = useState('0');
   const [previousTotal, setPreviousTotal] = useState(0);
+  const [operation, setOperation] = useState(null);
 
   const handleNumber = e => {
     e.preventDefault();
-    total === '0' ? setTotal(e.target.value) : setTotal(total + e.target.value);
+    total === '0' || parseInt(total) === parseInt(previousTotal)
+      ? setTotal(e.target.value)
+      : setTotal(total + e.target.value);
   };
 
   const handleOperator = e => {
@@ -23,6 +26,8 @@ const Calculator = () => {
       setTotal,
       previousTotal,
       setPreviousTotal,
+      operation,
+      setOperation,
     });
   };
 
