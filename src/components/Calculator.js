@@ -6,9 +6,10 @@ import Operators from './Operators';
 import Numbers from './Numbers';
 
 import operations from '../helpers/operations';
+import useNum from '../helpers/useNum';
 
 const Calculator = () => {
-  const [total, setTotal] = useState('0');
+  const [total, setTotal] = useNum('0');
   const [previousTotal, setPreviousTotal] = useState(0);
   const [operation, setOperation] = useState(null);
 
