@@ -15,7 +15,7 @@ const Calculator = () => {
 
   const handleNumber = e => {
     e.preventDefault();
-    total === '0' || parseInt(total) === parseInt(previousTotal)
+    total === '0' || parseFloat(total) === parseFloat(previousTotal)
       ? setTotal(e.target.value)
       : setTotal(total + e.target.value);
   };

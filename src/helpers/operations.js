@@ -12,7 +12,7 @@ export default {
     props.setPreviousTotal(total);
     props.setOperation('+');
   },
-  '-': props=> {
+  '-': props => {
     let total = props.total;
     if (props.operation) {
       total = evalOp(props.previousTotal, props.total, props.operation);
@@ -21,7 +21,7 @@ export default {
     props.setPreviousTotal(total);
     props.setOperation('-');
   },
-  '*': props=> {
+  '*': props => {
     let total = props.total;
     if (props.operation) {
       total = evalOp(props.previousTotal, props.total, props.operation);
@@ -30,7 +30,7 @@ export default {
     props.setPreviousTotal(total);
     props.setOperation('*');
   },
-  '/': props=> {
+  '/': props => {
     let total = props.total;
     if (props.operation) {
       total = evalOp(props.previousTotal, props.total, props.operation);
@@ -39,7 +39,7 @@ export default {
     props.setPreviousTotal(total);
     props.setOperation('/');
   },
-  '=': props=> {
+  '=': props => {
     let total = props.total;
     if (props.operation) {
       total = evalOp(props.previousTotal, props.total, props.operation);
@@ -52,10 +52,10 @@ export default {
 
 function evalOp(a, b, operation) {
   const callOp = {
-    '+': () => parseInt(a) + parseInt(b),
-    '-': () => parseInt(a) - parseInt(b),
-    '*': () => parseInt(a) * parseInt(b),
-    '/': () => parseInt(a) / parseInt(b),
+    '+': () => parseFloat(a) + parseFloat(b),
+    '-': () => parseFloat(a) - parseFloat(b),
+    '*': () => parseFloat(a) * parseFloat(b),
+    '/': () => parseFloat(a) / parseFloat(b),
   };
 
   return callOp[operation]();
