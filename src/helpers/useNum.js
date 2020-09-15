@@ -8,7 +8,15 @@ const useNum = initialState => {
     if (x.length <= 12) {
       return setNum(x);
     } else {
-      return setNum('ERROR');
+      let isAcceptableFloat = false;
+      let modifiedFloat = '';
+      for (let i = 0; i < 12; i++) {
+        if (x[i] === '.') {
+          isAcceptableFloat = true;
+        }
+        modifiedFloat += x[i];
+      }
+      return isAcceptableFloat ? setNum(modifiedFloat) : setNum('ERROR');
     }
   };
 
