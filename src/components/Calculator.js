@@ -44,8 +44,8 @@ const Calculator = () => {
 const CalculatorContainer = styled.div`
   display: grid;
   background-color: #0f0ff9;
-  width: 40%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   max-width: 30rem;
   max-height: 40rem;
   border-radius: 2rem;
