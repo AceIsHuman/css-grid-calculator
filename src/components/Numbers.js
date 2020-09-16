@@ -8,7 +8,14 @@ const Numbers = props => {
       <Button
         value="0"
         gridRow="6 / span 1"
-        gridColumn="1 / span 3"
+        gridColumn="1 / span 2"
+        color="darkgray"
+        method={handleNumber}
+      />
+      <Button
+        value="."
+        gridRow="6 / span 1"
+        gridColumn="3 / span 1"
         color="darkgray"
         method={handleNumber}
       />
