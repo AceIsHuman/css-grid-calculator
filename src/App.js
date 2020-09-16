@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import Calculator from "./components/Calculator";
+import Calculator from './components/Calculator';
 
 function App() {
   return (
