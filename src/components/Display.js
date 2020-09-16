@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-const Display = (props) => {
+const Display = props => {
   return <DisplayContainer>{props.displayValue}</DisplayContainer>;
 };
 
